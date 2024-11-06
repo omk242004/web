@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Properties Example</title>
+    <style>
+        /* Basic styling for body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        /* Styling the main heading */
+        h1 {
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+            text-shadow: 1px 1px 2px #aaa; /* Adding shadow to text */
+        }
+
+        /* Styling the paragraphs */
+        p {
+            line-height: 1.6;
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 15px; /* Margin below paragraphs */
+        }
+
+        /* Styling a button */
+        .button {
+            background-color: #007bff; /* Blue background */
+            color: white; /* White text */
+            padding: 12px 24px; /* Padding around the text */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            display: inline-block; /* Inline element with block properties */
+            text-decoration: none; /* No underline */
+            font-weight: bold; /* Bold text */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Styling a section */
+        .box {
+            background-color: white; /* White background */
+            border: 1px solid #ddd; /* Light gray border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 20px; /* Padding inside the box */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            margin: 20px 0; /* Margin above and below the box */
+            transition: transform 0.2s; /* Animation on hover */
+        }
+
+        /* Box hover effect */
+        .box:hover {
+            transform: scale(1.02); /* Slightly scale up on hover */
+        }
+
+        /* Adding a navigation menu */
+        nav {
+            background-color: #343a40; /* Dark background */
+            color: white; /* White text */
+            padding: 10px 0; /* Padding for navigation */
+            text-align: center; /* Center align text */
+        }
+
+        nav a {
+            color: white; /* White text */
+            padding: 14px 20px; /* Padding around links */
+            text-decoration: none; /* No underline */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        nav a:hover {
+            background-color: #495057; /* Darker gray on hover */
+        }
+
+        /* Styling the footer */
+        footer {
+            text-align: center; /* Center text */
+            padding: 15px 0; /* Padding for footer */
+            margin-top: 20px; /* Margin above footer */
+            font-size: 14px; /* Smaller font size */
+            color: #777; /* Gray text color */
+        }
+
+        /* Media query for responsive design */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px; /* Less padding on small screens */
+            }
+            .button {
+                width: 100%; /* Full width buttons on small screens */
+                padding: 10px; /* Less padding */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#section1">Home</a>
+        <a href="#section2">About</a>
+        <a href="#section3">Contact</a>
+    </nav>
+
+    <h1>Advanced CSS Properties Example</h1>
+
+    <div class="box" id="section1">
+        <h2>What is CSS?</h2>
+        <p>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML. CSS controls the layout of multiple web pages all at once.</p>
+    </div>
+
+    <div class="box" id="section2">
+        <h2>Why Use CSS?</h2>
+        <p>CSS allows you to create visually attractive web pages. It helps separate content from design and offers control over the layout, colors, fonts, and more.</p>
+    </div>
+
+    <div class="box" id="section3">
+        <h2>Learn More</h2>
+        <p>If you want to learn more about CSS, click the button below!</p>
+        <a href="https://www.w3schools.com/css/" class="button">Learn CSS</a>
+    </div>
+
+    <footer>
+        &copy; 2024 CSS Properties Example. All rights reserved.
+    </footer>
+
+</body>
+</html>

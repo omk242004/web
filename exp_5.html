@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript Event Handling Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .box {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+        .box:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        #inputMessage {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Advanced JavaScript Event Handling Example</h1>
+
+    <div class="box">
+        <h2>Click Event</h2>
+        <p id="clickMessage">Click the button below:</p>
+        <button class="button" id="clickButton">Click Me!</button>
+    </div>
+
+    <div class="box">
+        <h2>Mouseover Event</h2>
+        <p id="hoverMessage">Hover over the box below:</p>
+        <div class="box" id="hoverBox" style="padding: 50px;">
+            Hover over this box!
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>Input Event</h2>
+        <p>Type something in the input box:</p>
+        <input type="text" id="inputField" placeholder="Type here..." />
+        <p id="inputMessage"></p>
+    </div>
+
+    <div class="box">
+        <h2>Double Click Event</h2>
+        <p>Double-click the button below to reset messages:</p>
+        <button class="button" id="resetButton">Reset Messages</button>
+    </div>
+
+    <script>
+        // Click Event Handling
+        const clickButton = document.getElementById('clickButton');
+        const clickMessage = document.getElementById('clickMessage');
+
+        clickButton.addEventListener('click', function() {
+            clickMessage.textContent = 'Button was clicked!';
+            clickMessage.style.color = '#28a745'; // Change text color to green
+        });
+
+        // Mouseover Event Handling
+        const hoverBox = document.getElementById('hoverBox');
+        const hoverMessage = document.getElementById('hoverMessage');
+
+        hoverBox.addEventListener('mouseover', function() {
+            hoverMessage.textContent = 'You are hovering over the box!';
+            hoverMessage.style.color = '#17a2b8'; // Change text color to teal
+        });
+
+        hoverBox.addEventListener('mouseout', function() {
+            hoverMessage.textContent = 'Hover over the box below:';
+            hoverMessage.style.color = '#555'; // Reset text color
+        });
+
+        // Input Event Handling
+        const inputField = document.getElementById('inputField');
+        const inputMessage = document.getElementById('inputMessage');
+
+        inputField.addEventListener('input', function() {
+            inputMessage.textContent = 'You typed: ' + inputField.value;
+            inputMessage.style.color = '#007bff'; // Change text color to blue
+        });
+
+        // Double Click Event Handling
+        const resetButton = document.getElementById('resetButton');
+        
+        resetButton.addEventListener('dblclick', function() {
+            clickMessage.textContent = 'Click the button below:';
+            hoverMessage.textContent = 'Hover over the box below:';
+            inputMessage.textContent = '';
+            clickMessage.style.color = '#555'; // Reset color
+            hoverMessage.style.color = '#555'; // Reset color
+            inputMessage.style.color = '#555'; // Reset color
+        });
+    </script>
+
+</body>
+</html>
